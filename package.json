@@ -1,0 +1,21 @@
+{
+  "name": "cde-quickstart",
+  "version": "1.0.0",
+  "description": "A repository to quickly try out different CDE vendors",
+  "author": "Daniel Molenaars",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/node": "^20.8.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
