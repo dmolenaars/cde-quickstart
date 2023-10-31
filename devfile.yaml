@@ -4,7 +4,7 @@ metadata:
 components:
   - name: runtime
     container:
-      image: mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye,
+      image: mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye
       mountSources: true
       command: ['sleep', 'infinity']
       endpoints:
