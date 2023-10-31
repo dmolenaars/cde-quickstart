@@ -1,0 +1,28 @@
+schemaVersion: 2.0.0
+metadata:
+  name: express-app
+components:
+  - name: runtime
+    container:
+      image: mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye,
+      mountSources: true
+      command: ['sleep', 'infinity']
+      endpoints:
+        - name: http-3000
+          targetPort: 3000
+      
+commands:
+  - id: setup
+    exec:
+      component: runtime
+      commandLine: "npm install && npm run build && npm run start"
+      workingDir: ${PROJECT_SOURCE}
+  - id: run
+    exec:
+      component: runtime
+      commandLine: "npm run start"
+      workingDir: ${PROJECT_SOURCE}
+events:
+  postStart:
+    - setup
+    - run
