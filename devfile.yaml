@@ -1,6 +1,6 @@
 schemaVersion: 2.0.0
 metadata:
-  name: express-app
+  name: cde-quickstart
 components:
   - name: runtime
     container:
